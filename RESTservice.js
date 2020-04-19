@@ -76,7 +76,10 @@ app.post('/add_emp',urlencodedparser,function(r,s){
 
 
 	});
-
+app.get('/WToL.htm',function(r,s){
+	console.log("Got a request");
+	s.sendFile(__dirname+'/WToL.htm');
+	});
 
 
 const server = app.listen(process.env.PORT||"8080",function(){
